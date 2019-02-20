@@ -1,14 +1,36 @@
 package uk.co.bpdts.selenium.tutorial;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.Assert.fail;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 public class AmazonAddToBagTest {
 
+    private WebDriver driver;
+
+    @Before
+    public void setUp(){
+        System.setProperty("webdriver.chrome.driver",
+                this.getClass().getClassLoader().getResource("chromedriver").getPath());
+        driver = new ChromeDriver();
+
+    }
     @Test
     public void testSearchForProductAndAddToBasket() {
 
-        fail("First Test Failure");
+        driver.get("https://www.amazon.co.uk");
+        assertThat("url is wrong", driver.getCurrentUrl(), is("https://www.amazon.co.uk/"));
+
+    }
+
+    @After
+    public void tearDown(){
+        driver.quit();
+
     }
 }
