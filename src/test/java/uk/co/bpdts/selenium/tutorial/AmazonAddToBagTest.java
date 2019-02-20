@@ -8,6 +8,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import uk.co.bpdts.selenium.tutorial.pageObjects.AddToBasketPageObject;
 import uk.co.bpdts.selenium.tutorial.pageObjects.AmazonHomePageObject;
 import uk.co.bpdts.selenium.tutorial.pageObjects.SearchResultPageObject;
 
@@ -34,10 +35,11 @@ public class AmazonAddToBagTest {
     @Test
     public void testSearchForProductAndAddToBasket() {
 
-
         AmazonHomePageObject amazonHomePageObject = new AmazonHomePageObject(driver); // New instance of an Object
         SearchResultPageObject searchResultPageObject = amazonHomePageObject.searchForItem("Jo Nesbo");
         searchResultPageObject.findSpecificItemFromSearchResultsByTitle("Macbeth (Hogarth Shakespeare)");
+        AddToBasketPageObject addToBasketPageObject = new AddToBasketPageObject();
+
 
         assertThat("Not on book product page", driver.getTitle(), containsString("Macbeth"));
 
@@ -50,7 +52,7 @@ public class AmazonAddToBagTest {
 
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
 
     }
 }
