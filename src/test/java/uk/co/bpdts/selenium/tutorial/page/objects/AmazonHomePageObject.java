@@ -12,11 +12,23 @@ public class AmazonHomePageObject {
         this.driver = driver;
     }
 
-    public SearchResultPageObject searchForItem(String searchTerm) {
+    /*public SearchResultPageObject searchForItem(String searchTerm) {
 
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(searchTerm);
+        // This code is for the original amazon book search and clicking on the search button when author is entered
+        //into search box
+
+        *//*driver.findElement(By.id("twotabsearchtextbox")).sendKeys(searchTerm);
         driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
 
-        return new SearchResultPageObject(driver);
+        return new SearchResultPageObject(driver);*//*
+
+
+    }*/
+
+    public CareersPageObject clickCareersLink(){
+
+        driver.get("https://www.amazon.jobs/en-gb");
+
+        return new CareersPageObject(driver);
     }
 }

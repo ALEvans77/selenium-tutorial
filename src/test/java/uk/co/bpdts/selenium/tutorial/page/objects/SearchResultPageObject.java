@@ -36,13 +36,15 @@ public class SearchResultPageObject {
         }
     }
 
-    public ProductPage addToBasket() {
+    /*public ProductPage addToBasket() {
 
         driver.findElement(By.id("add-to-cart-button")).click();
         //driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
 
         return new ProductPage(driver);
-    }
+    }*/
+
+
 
 
 }
