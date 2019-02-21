@@ -1,8 +1,4 @@
 .idea/
 *.iml
 .DS_Store
-<<<<<<< HEAD
 target/
-=======
-target/
->>>>>>> e68e5f67666e8fb9e599c44c83228de0cbccde4d
