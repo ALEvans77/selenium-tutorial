@@ -19,7 +19,7 @@ public class WelcomeToGooglePage {
 
     public VerifyPhoneNumberPage enterPhoneNumber(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("phoneNumberId")));
-        driver.findElement(By.xpath("//*[@id=\"phoneNumberId\"]")).sendKeys("07779131748");
+        driver.findElement(By.xpath("//*[@id=\"phoneNumberId\"]")).sendKeys("07912567217");
         driver.findElement(By.xpath("//*[@id=\"gradsIdvPhoneNext\"]/content/span")).click();
 
         return new VerifyPhoneNumberPage(driver);

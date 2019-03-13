@@ -26,7 +26,7 @@ public class GmailSignUp {
 
     //Enter username method
     public void enterUserName(){
-        driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("BarryFlanders7788");
+        driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("FredDavies7788");
 
     }
 
